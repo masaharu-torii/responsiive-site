@@ -1,0 +1,107 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$darkgrayColor: #999999;
+$grayColor: #dcdcdc;
+$lightgrayColor: #ededed;
+$skyblueColor: #d9edf7;
+$whiteColor: #ffffff;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  font-size: 2rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color:$skyblueColor;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-image {
+  background-image: url("./images/img_header.jpg");
+  /*background-image: url("https://techacademy.s3.amazonaws.com/bootcamp/webdesign/mobile-design/img_work_site.png");*/
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 10px;
+}
+
+h1{
+  font-weight:bold;
+  color:$darkgrayColor;
+  margin:20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.box {
+  margin: 10px;
+  flex: 1;
+  font-weight:bold;
+  
+  .title-box{
+    background-color:$grayColor;
+    padding:10px;
+    color:$darkgrayColor;
+  }
+  
+  .text-box{
+    background-color:$darkgrayColor;
+    padding:20px;
+    height:50px;
+    align-items:center;
+    color:$whiteColor;
+  }
+  
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.container-button{
+  background-color:$lightgrayColor;
+  padding:30px;
+  height:50px;
+  color:$darkgrayColor;
+  font-weight:bold;
+
+    .font-size{
+      font-size:1.5rem;
+    }
+
+    .button{
+      margin: auto;
+      text-align: center;
+      padding: 5px 0;
+      width: 180px;
+      display: block;
+      color:$whiteColor;
+      background-color: $darkgrayColor;
+      @include border-radius(5px);
+      font-size: 1.5rem;
+    }
+}
